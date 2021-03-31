@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b7b56d567ef414ae98eb5e023169e68b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - groundTile: {instanceID: 0}
+  - canColaPrefab: {fileID: 3299610526251470077, guid: 67175bb6914c14256b6706605237d355,
+      type: 3}
+  - glassColaPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
