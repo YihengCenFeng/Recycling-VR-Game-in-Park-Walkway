@@ -3,7 +3,6 @@
 public class TrashBinSwitching : MonoBehaviour
 {
     public int selectedTrashBin = 0;
-    public int previousSelectedTrashBin;
 
     void Start()
     {
@@ -12,15 +11,31 @@ public class TrashBinSwitching : MonoBehaviour
 
     void Update()
     {
-        previousSelectedTrashBin = selectedTrashBin;
+        int previousSelectedTrashBin = selectedTrashBin;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             if (selectedTrashBin >= transform.childCount - 1)
                 selectedTrashBin = 0;
             else
                 selectedTrashBin++;
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (selectedTrashBin >= transform.childCount - 1)
+                selectedTrashBin = 0;
+            else
+                selectedTrashBin++;
+        }
+
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    if (selectedTrashBin >= transform.childCount - 1)
+        //        selectedTrashBin = 0;
+        //    else
+        //        selectedTrashBin++;
+        //}
 
         if (previousSelectedTrashBin != selectedTrashBin)
             SelectTrashBin();
@@ -39,3 +54,5 @@ public class TrashBinSwitching : MonoBehaviour
         }
     }
 }
+
+

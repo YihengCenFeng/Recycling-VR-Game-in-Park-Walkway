@@ -416,9 +416,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660759561}
-  m_LocalRotation: {x: -0.026176924, y: -0, z: -0, w: 0.99965733}
+  m_LocalRotation: {x: -0.026176924, y: 0, z: 0, w: 0.99965733}
   m_LocalPosition: {x: 0, y: -0.95, z: 1.8}
-  m_LocalScale: {x: 1.6, y: 0.65000004, z: 1.6000001}
+  m_LocalScale: {x: 1.6, y: 0.65, z: 1.6000001}
   m_Children:
   - {fileID: 1640568009}
   - {fileID: 87662601}
@@ -439,7 +439,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedTrashBin: 0
-  previousSelectedTrashBin: 0
 --- !u!65 &660759564
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -765,7 +764,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedTrashBin: 0
-  previousSelectedTrashBin: 0
 --- !u!1 &1198785275
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,8 +798,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 25, y: -300}
-  m_SizeDelta: {x: 250, y: 100}
+  m_AnchoredPosition: {x: 90, y: -300}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1198785277
 MonoBehaviour:
@@ -828,7 +826,7 @@ MonoBehaviour:
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 50
+    m_MaxSize: 80
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1074,6 +1072,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2301146, guid: 60270cf52a5e94998a5a335989159738, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2301146, guid: 60270cf52a5e94998a5a335989159738, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cb1460f617514a888f47071314ccdae, type: 2}
+    - target: {fileID: 2301146, guid: 60270cf52a5e94998a5a335989159738, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cb1460f617514a888f47071314ccdae, type: 2}
+    - target: {fileID: 2301146, guid: 60270cf52a5e94998a5a335989159738, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cb1460f617514a888f47071314ccdae, type: 2}
+    - target: {fileID: 2301146, guid: 60270cf52a5e94998a5a335989159738, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cb1460f617514a888f47071314ccdae, type: 2}
+    - target: {fileID: 723926960, guid: 60270cf52a5e94998a5a335989159738, type: 3}
+      propertyPath: maxReticleDistance
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60270cf52a5e94998a5a335989159738, type: 3}
 --- !u!1001 &1550058493
@@ -1169,7 +1191,6 @@ MonoBehaviour:
   vrCamera: {fileID: 963194228}
   speed: 8
   toggleAngle: 20
-  jumpForce: 100
 --- !u!143 &1634007113
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1196,8 +1217,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634007111}
   m_LocalRotation: {x: 0.043619405, y: 0, z: 0, w: 0.9990483}
-  m_LocalPosition: {x: 0, y: 2.9, z: 0}
-  m_LocalScale: {x: 1, y: 2.8, z: 1}
+  m_LocalPosition: {x: 0, y: 2.8, z: 0}
+  m_LocalScale: {x: 1, y: 2.7, z: 1}
   m_Children:
   - {fileID: 963194228}
   - {fileID: 660759562}
@@ -1287,7 +1308,7 @@ MonoBehaviour:
   sounds:
   - name: MainTheme
     clip: {fileID: 8300000, guid: 9fd568ed717854b89a38d10b0e64e954, type: 3}
-    volume: 0.15
+    volume: 0.1
     loop: 1
     source: {fileID: 0}
   - name: Correct
@@ -1381,9 +1402,9 @@ Canvas:
   m_GameObject: {fileID: 2109903375}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 963194227}
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
