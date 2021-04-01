@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public void DecrementScore()
     {
         if (score == 0)
-            FindObjectOfType<PlayerMovement>().Die();
+            FindObjectOfType<VRMovement>().Die();
         else
         {
             score--;

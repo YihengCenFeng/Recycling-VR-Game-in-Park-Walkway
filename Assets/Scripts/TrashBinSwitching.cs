@@ -3,6 +3,7 @@
 public class TrashBinSwitching : MonoBehaviour
 {
     public int selectedTrashBin = 0;
+    public int previousSelectedTrashBin;
 
     void Start()
     {
@@ -11,7 +12,7 @@ public class TrashBinSwitching : MonoBehaviour
 
     void Update()
     {
-        int previousSelectedTrashBin = selectedTrashBin;
+        previousSelectedTrashBin = selectedTrashBin;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
