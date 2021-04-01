@@ -10,6 +10,11 @@ public class GroundTile : MonoBehaviour
     private void Start()
     {
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
+
+        if (Random.Range(0, 2) == 1)
+            SpawnObject(canColaPrefab);
+        else
+            SpawnObject(applePrefab);
     }
 
     private void OnTriggerExit(Collider other)
@@ -28,24 +33,10 @@ public class GroundTile : MonoBehaviour
         Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);
     }
 
-    public void SpawnCanCola()
+    public void SpawnObject(GameObject objectToSpawn)
     {
-        int canColaToSpawn = 1;
-        for (int i = 0; i < canColaToSpawn; i++)
-        {
-            GameObject temp = Instantiate(canColaPrefab, transform);
-            temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
-        }
-    }
-
-    public void SpawnApple()
-    {
-        int appleToSpawn = 1;
-        for (int i = 0; i < appleToSpawn; i++)
-        {
-            GameObject temp = Instantiate(applePrefab, transform);
-            temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
-        }
+        GameObject temp = Instantiate(objectToSpawn, transform);
+        temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
     }
 
     Vector3 GetRandomPointInCollider(Collider collider)
