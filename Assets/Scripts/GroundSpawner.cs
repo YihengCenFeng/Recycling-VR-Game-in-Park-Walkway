@@ -12,14 +12,14 @@ public class GroundSpawner : MonoBehaviour
 
         if(spawnObstacle)
         {
-            if (Random.Range(0, 2) == 1)
+            if (Random.Range(0, 3) == 1)
                 FindObjectOfType<GroundTile>().SpawnObstacle();
         }
     }
 
     private void Start()
     {
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 7; i++)
         {
             if(i<1)
                 SpawnGround(false);
