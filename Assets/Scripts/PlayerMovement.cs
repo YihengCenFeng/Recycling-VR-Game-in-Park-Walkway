@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     bool alive = true;
 
-    public float speed = 3f;
+    public float speed = 5f;
     public Rigidbody rb;
 
     float horizontalInput;

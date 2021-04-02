@@ -50,7 +50,7 @@ public class GroundTile : MonoBehaviour
         if (point != collider.ClosestPoint(point))
             point = GetRandomPointInCollider(collider);
 
-        point.y = 1.8f;
+        point.y = 1.5f;
         return point;
     }
 }

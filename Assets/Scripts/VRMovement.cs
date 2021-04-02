@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 public class VRMovement : MonoBehaviour
 {
     public Transform vrCamera;
-    public float speed = 3f;
-    public float toggleAngle = 20f;
+    public float speed = 5f;
+    public float toggleAngle = 10f;
     bool moveForward;
     bool alive = true;
 
