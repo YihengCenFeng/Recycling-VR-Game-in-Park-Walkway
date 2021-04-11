@@ -5,15 +5,17 @@ public class GroundSpawner : MonoBehaviour
     public GameObject groundTile;
     Vector3 nextSpawnPoint;
 
-    public void SpawnGround(bool spawnObstacle)
+    public void SpawnGround(bool spawnItem)
     {
         GameObject temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
         nextSpawnPoint = temp.transform.GetChild(1).transform.position;
 
-        if(spawnObstacle)
+        if(spawnItem)
         {
             if (Random.Range(0, 3) == 1)
                 FindObjectOfType<GroundTile>().SpawnObstacle();
+
+            FindObjectOfType<GroundTile>().SpawnObject();
         }
     }
 
