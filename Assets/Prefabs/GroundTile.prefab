@@ -163,10 +163,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 2241370970710079415, guid: 8d4ef27a684394cd688e78f14952070f,
     type: 3}
-  canColaPrefab: {fileID: 3299610526251470077, guid: 67175bb6914c14256b6706605237d355,
-    type: 3}
-  applePrefab: {fileID: 6841143883557615174, guid: 35dccfa1a584b46c0aa8a53a84788f95,
-    type: 3}
+  blueTrashPrefab:
+  - {fileID: 3299610526251470077, guid: 67175bb6914c14256b6706605237d355, type: 3}
+  - {fileID: 3831038319630365486, guid: c70fa850e5a394ef383d1fd53ef90b9a, type: 3}
+  greenTrashPrefab:
+  - {fileID: 6250206288766570909, guid: d1c563ab3e3d14d61b9ea6e540977b97, type: 3}
+  brownTrashPrefab:
+  - {fileID: 3380155868034178988, guid: 71d8488c0841a4649831850c1e488d6b, type: 3}
+  - {fileID: 4749665426122590926, guid: 9362f495191964e2a875273d2a39b6d0, type: 3}
 --- !u!1 &5220308098307898670
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +467,7 @@ PrefabInstance:
     - target: {fileID: 4385080170327957909, guid: ff62b58c5a9ea164fa8ddf8038e10cd1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.35
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4385080170327957909, guid: ff62b58c5a9ea164fa8ddf8038e10cd1,
         type: 3}
@@ -558,7 +562,7 @@ PrefabInstance:
     - target: {fileID: 5440707293445741943, guid: 494f6d43e170e9145bc7865d243ee00b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.35
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5440707293445741943, guid: 494f6d43e170e9145bc7865d243ee00b,
         type: 3}
@@ -643,7 +647,7 @@ PrefabInstance:
     - target: {fileID: 4385080170327957909, guid: ff62b58c5a9ea164fa8ddf8038e10cd1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.35
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4385080170327957909, guid: ff62b58c5a9ea164fa8ddf8038e10cd1,
         type: 3}
