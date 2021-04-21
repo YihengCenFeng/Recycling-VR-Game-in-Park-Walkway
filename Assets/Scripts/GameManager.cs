@@ -7,10 +7,13 @@ public class GameManager : MonoBehaviour
     public static GameManager inst;
     public Text scoreText;
 
+    public Image[] lives;
+    public int livesRemaining;
+
     public void IncrementScore()
     {
         score++;
-        scoreText.text = "SCORE: " + score;
+        scoreText.text = "Score: " + score;
     }
 
     public void DecrementScore()
@@ -20,8 +23,18 @@ public class GameManager : MonoBehaviour
         else
         {
             score--;
-            scoreText.text = "SCORE: " + score;
+            scoreText.text = "Score: " + score;
         }
+    }
+
+    public void LoseLife()
+    {
+        livesRemaining--;
+        //lives[livesRemaining].enabled = false;
+        lives[livesRemaining].color = new Color32(55, 40, 40, 125);
+
+        if (livesRemaining == 0)
+            FindObjectOfType<VRMovement>().Die();
     }
 
     private void Awake()

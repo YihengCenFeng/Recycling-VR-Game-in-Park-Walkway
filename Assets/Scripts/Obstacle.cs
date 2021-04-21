@@ -2,11 +2,14 @@
 
 public class Obstacle : MonoBehaviour
 {
+    private bool hasEntered;
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Player" || other.transform.parent.name == "TrashBinHolder")
+        if (!hasEntered && (other.gameObject.name == "Player" || other.transform.parent.name == "TrashBinHolder"))
         {
-            FindObjectOfType<VRMovement>().Die();
+            hasEntered = true;
+            GameManager.inst.LoseLife();
             FindObjectOfType<AudioManager>().PlaySound("Incorrect");
         }
     }
