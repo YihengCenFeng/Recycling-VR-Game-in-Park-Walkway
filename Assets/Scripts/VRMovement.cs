@@ -10,14 +10,34 @@ public class VRMovement : MonoBehaviour
     private float gravity= -9.81f;
     public float toggleAngle = 10f;
     bool moveForward;
-    bool alive = true;
+    bool alive;
+
+    public static VRMovement player;
+    bool played = false;
+    public GameOver gameover;
+    [SerializeField] Canvas score;
 
     private CharacterController cc;
 
+    public void GameOverPage()
+    {
+        score.enabled = false;
+        gameover.Setup(GameManager.inst.score);
+        Invoke("MainMenu", 4.0f);
+    }
+
     void Start()
     {
-        // get CharaterController component
         cc = GetComponent<CharacterController>();
+
+        score.enabled = true;
+        gameover.hide();
+        alive = true;
+    }
+
+    private void Awake()
+    {
+        player = this;
     }
 
     private void FixedUpdate()
@@ -51,12 +71,21 @@ public class VRMovement : MonoBehaviour
     {
         alive = false;
 
-        // Restart the game after 2 seconds
-        Invoke("Restart", 2);
+        if (!played)
+        {
+            Invoke("GameOverPage", 1.0f);
+            played = true;
+        }
+
     }
 
     void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    void MainMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
     }
 }

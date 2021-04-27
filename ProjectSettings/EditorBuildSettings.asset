@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ParkWalkway.unity
     guid: e32805060fb83447cbd948525a76f7f7
+  - enabled: 1
+    path: Assets/Scenes/MenuScene.unity
+    guid: 31a2e385282574013bfb05875170255d
   m_configObjects: {}
