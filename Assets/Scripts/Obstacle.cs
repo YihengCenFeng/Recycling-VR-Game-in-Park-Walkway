@@ -4,7 +4,7 @@ public class Obstacle : MonoBehaviour
 {
     private bool hasEntered;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         if (!hasEntered && (other.gameObject.name == "Player" || other.transform.parent.name == "TrashBinHolder"))
         {
