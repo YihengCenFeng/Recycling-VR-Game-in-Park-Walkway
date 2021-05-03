@@ -33,12 +33,12 @@ public class GroundTile : MonoBehaviour
     {
         int objectSpawnIndex = Random.Range(0, 3);
         GameObject temp;
-        int randomTrashIndex = Random.Range(0, 2);
+        int randomTrashIndex = Random.Range(0, 3);
 
         if (objectSpawnIndex == 0)
             temp = Instantiate(blueTrashPrefab[randomTrashIndex], transform);
         else if (objectSpawnIndex == 1)
-            temp = Instantiate(greenTrashPrefab[0], transform);
+            temp = Instantiate(greenTrashPrefab[randomTrashIndex], transform);
         else
             temp = Instantiate(brownTrashPrefab[randomTrashIndex], transform);
 
@@ -56,7 +56,7 @@ public class GroundTile : MonoBehaviour
         if (point != collider.ClosestPoint(point))
             point = GetRandomPointInCollider(collider);
 
-        point.y = 1.6f;
+        point.y = 1.65f;
         return point;
     }
 }
