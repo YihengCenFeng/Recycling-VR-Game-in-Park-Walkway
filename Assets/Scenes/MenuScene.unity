@@ -356,7 +356,18 @@ MonoBehaviour:
   gazeTime: 2
   GVRClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 979682658}
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   gvrTimer: 0
 --- !u!114 &165845216
 MonoBehaviour:
@@ -564,7 +575,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Scene
+  m_Text: Park Scene
 --- !u!222 &236011223
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -680,7 +691,7 @@ GameObject:
   - component: {fileID: 580492645}
   - component: {fileID: 580492644}
   m_Layer: 5
-  m_Name: Scene (2)
+  m_Name: RestaurantScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1011,7 +1022,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Park Scene
+  m_Text: Ocean Scene
 --- !u!222 &651842357
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1280,7 +1291,7 @@ GameObject:
   - component: {fileID: 1311239381}
   - component: {fileID: 1311239380}
   m_Layer: 5
-  m_Name: Scene (3)
+  m_Name: ParkScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1373,7 +1384,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: ParkScene
           m_BoolArgument: 0
         m_CallState: 2
   gvrTimer: 0
@@ -1472,7 +1483,7 @@ GameObject:
   - component: {fileID: 1445245389}
   - component: {fileID: 1445245388}
   m_Layer: 5
-  m_Name: Park Scene
+  m_Name: OceanScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1565,7 +1576,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ParkScene
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   gvrTimer: 0
@@ -1718,7 +1729,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Scene
+  m_Text: Restaurant Scene
 --- !u!222 &1783654229
 CanvasRenderer:
   m_ObjectHideFlags: 0
